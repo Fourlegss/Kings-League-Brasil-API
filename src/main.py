@@ -2,16 +2,14 @@ import schedule
 import time
 from src.extract.scraper import KingsLeagueScraper
 from src.transform.transformer import DataTransformer
-from src.load.loader import MongoDBLoader
 
 def run_etl():
-    """Executa o processo completo de ETL"""
-    print("Iniciando processo ETL...")
+    """Executa o processo de extração e transformação de dados"""
+    print("Iniciando processo de extração e transformação...")
     
     # Inicializa os componentes
     scraper = KingsLeagueScraper()
     transformer = DataTransformer()
-    loader = MongoDBLoader()
 
     try:
         # Extração
@@ -24,24 +22,15 @@ def run_etl():
         transformed_teams = transformer.transform_teams(teams_data)
         transformed_matches = transformer.transform_matches(matches_data)
 
-        # Carregamento
-        print("Carregando dados no MongoDB...")
-        teams_loaded = loader.load_teams(transformed_teams)
-        matches_loaded = loader.load_matches(transformed_matches)
-
-        if teams_loaded and matches_loaded:
-            print("Processo ETL concluído com sucesso!")
-        else:
-            print("Ocorreram erros durante o processo ETL.")
+        print("Processo concluído com sucesso!")
+        return transformed_teams, transformed_matches
 
     except Exception as e:
-        print(f"Erro durante o processo ETL: {str(e)}")
-    
-    finally:
-        loader.close_connection()
+        print(f"Erro durante o processo: {str(e)}")
+        return None, None
 
 def main():
-    # Executa o ETL imediatamente
+    # Executa o processo imediatamente
     run_etl()
 
     # Agenda a execução periódica

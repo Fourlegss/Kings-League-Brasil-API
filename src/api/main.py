@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 import sys
 import os
 import logging
@@ -40,21 +42,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Configuração de arquivos estáticos
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 # Inicializa os componentes
 scraper = KingsLeagueScraper()
 transformer = DataTransformer()
 cache = CacheManager()
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 async def root():
-    """Endpoint raiz da API"""
-    return {
-        "message": "Bem-vindo à API da Kings League Brasil",
-        "endpoints": {
-            "teams": "/times",
-            "matches": "/partidas"
-        }
-    }
+    """Retorna a página inicial com redirecionamento para a documentação"""
+    with open("static/index.html", "r", encoding="utf-8") as f:
+        return f.read()
 
 @app.get("/times", response_model=TeamResponse)
 async def get_teams():

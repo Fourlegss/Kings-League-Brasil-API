@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API Kings League Brasil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .url {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .example {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Documentação da API Kings League Brasil</h1>
+    
+    <h2>Visão Geral</h2>
+    <p>A API Kings League Brasil é uma interface REST que fornece acesso programático aos dados da Kings League Brasil. Ela permite que desenvolvedores obtenham informações atualizadas sobre times e partidas da liga de forma estruturada e padronizada.</p>
+
+    <h2>Acesso à API</h2>
+    <p>A API está disponível em: <a href="https://kings-league-brasil-api.onrender.com/" class="url">https://kings-league-brasil-api.onrender.com/</a></p>
+
+    <h2>Documentação Interativa</h2>
+    <p>Para uma documentação interativa e mais detalhada, acesse:</p>
+    <ul>
+        <li><a href="https://kings-league-brasil-api.onrender.com/docs">Documentação Swagger</a></li>
+        <li><a href="https://kings-league-brasil-api.onrender.com/redoc">Documentação ReDoc</a></li>
+    </ul>
+
+    <h2>Endpoints</h2>
+
+    <div class="endpoint">
+        <h3>1. Listar Times</h3>
+        <p>Retorna a lista completa de times da Kings League Brasil.</p>
+        <p><strong>Endpoint:</strong> <code>GET /times</code></p>
+        <p><strong>URL Completa:</strong> <span class="url">https://kings-league-brasil-api.onrender.com/times</span></p>
+        
+        <h4>Resposta:</h4>
+        <pre><code>{
+    "status": "success",
+    "data": [
+        {
+            "name": "NOME_DO_TIME",
+            "slug": "nome-do-time",
+            "created_at": "2024-02-20T10:00:00",
+            "updated_at": "2024-02-20T10:00:00"
+        }
+    ],
+    "count": 12
+}</code></pre>
+    </div>
+
+    <div class="endpoint">
+        <h3>2. Listar Partidas</h3>
+        <p>Retorna a lista de partidas da Kings League Brasil.</p>
+        <p><strong>Endpoint:</strong> <code>GET /partidas</code></p>
+        <p><strong>URL Completa:</strong> <span class="url">https://kings-league-brasil-api.onrender.com/partidas</span></p>
+        
+        <h4>Resposta:</h4>
+        <pre><code>{
+    "status": "success",
+    "data": [
+        {
+            "match_id": "time1-vs-time2",
+            "home_team": "TIME_DA_CASA",
+            "away_team": "TIME_VISITANTE",
+            "link": "https://kingsleague.pro/pt/brazil/jogos/time1-vs-time2",
+            "created_at": "2024-02-20T10:00:00",
+            "updated_at": "2024-02-20T10:00:00"
+        }
+    ],
+    "count": 30
+}</code></pre>
+    </div>
+
+    <h2>Exemplos de Uso</h2>
+    
+    <div class="example">
+        <h3>Python</h3>
+        <pre><code>import requests
+
+# Obter lista de times
+response = requests.get('https://kings-league-brasil-api.onrender.com/times')
+times = response.json()
+
+# Obter lista de partidas
+response = requests.get('https://kings-league-brasil-api.onrender.com/partidas')
+partidas = response.json()</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>JavaScript</h3>
+        <pre><code>// Obter lista de times
+fetch('https://kings-league-brasil-api.onrender.com/times')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// Obter lista de partidas
+fetch('https://kings-league-brasil-api.onrender.com/partidas')
+  .then(response => response.json())
+  .then(data => console.log(data));</code></pre>
+    </div>
+
+    <h2>Considerações Importantes</h2>
+    <ul>
+        <li>Os dados são armazenados em cache por 15 minutos</li>
+        <li>Atualização automática a cada 24 horas</li>
+        <li>Implemente tratamento de erros em suas aplicações</li>
+        <li>Verifique o status da resposta antes de processar os dados</li>
+    </ul>
+</body>
+</html> 

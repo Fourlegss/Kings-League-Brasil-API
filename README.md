@@ -1,18 +1,18 @@
 # Kings League Brasil - API de Dados
 
-Este projeto tem como objetivo criar uma API de dados para a Kings League Brasil, implementando um processo de ETL (Extract, Transform, Load) para disponibilizar dados estruturados para análise.
+Este projeto tem como objetivo criar uma API de dados para a Kings League Brasil, implementando um processo de extração e transformação de dados para disponibilizar informações estruturadas via API.
 
 ## Objetivo
 
-O projeto visa extrair dados do site da Kings League Brasil, transformá-los em um formato adequado e carregá-los em um banco de dados MongoDB, criando assim uma base de dados estruturada para análise.
+O projeto visa extrair dados do site da Kings League Brasil, transformá-los em um formato adequado e disponibilizá-los através de uma API REST.
 
 ## Tecnologias Utilizadas
 
 - Python
-- MongoDB
 - BeautifulSoup4 (Web Scraping)
 - Requests (HTTP requests)
 - Pandas (Manipulação de dados)
+- FastAPI (API REST)
 - Schedule (Agendamento de tarefas)
 
 ## Estrutura do Projeto
@@ -24,13 +24,11 @@ kings_league_brasil_api/
 │   │   └── scraper.py
 │   ├── transform/
 │   │   └── transformer.py
-│   ├── load/
-│   │   └── loader.py
 │   └── config/
 │       └── config.py
 ├── tests/
-├── .env
 ├── requirements.txt
+├── API.md
 └── README.md
 ```
 
@@ -42,15 +40,20 @@ kings_league_brasil_api/
    - Windows: `venv\Scripts\activate`
    - Linux/Mac: `source venv/bin/activate`
 4. Instale as dependências: `pip install -r requirements.txt`
-5. Configure o arquivo `.env` com suas credenciais do MongoDB
 
 ## Uso
 
-Para executar o pipeline ETL:
+Para executar a API:
 
 ```bash
-python src/main.py
+python src/api/main.py
 ```
+
+A API estará disponível em `http://localhost:8000`
+
+## Documentação da API
+
+Para informações detalhadas sobre como usar a API, endpoints disponíveis, exemplos de código e considerações importantes, consulte o arquivo [API.md](API.md).
 
 ## Contribuição
 
