@@ -32,6 +32,8 @@ class DataTransformer:
             'match_id': match_data['match_id'],
             'home_team': self.normalize_team_name(match_data['home_team']),
             'away_team': self.normalize_team_name(match_data['away_team']),
+            'home_score': match_data.get('home_score'),
+            'away_score': match_data.get('away_score'),
             'link': match_data['link'],
             'created_at': datetime.now(),
             'updated_at': datetime.now()

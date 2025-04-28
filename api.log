@@ -1,3 +1,34 @@
 2025-04-20 18:45:35,640 - __main__ - INFO - Extraindo dados dos times
 2025-04-20 18:46:20,263 - __main__ - INFO - Extraindo dados das partidas
 2025-04-25 11:56:56,342 - __main__ - INFO - Extraindo dados dos times
+2025-04-28 09:07:47,682 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 09:17:18,548 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 09:18:33,129 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 10:52:55,716 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 10:53:03,713 - __main__ - INFO - Retornando partidas do cache
+2025-04-28 11:13:51,448 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:12:09,974 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:12:12,007 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:15:24,083 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:15:25,453 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:46:55,798 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:46:56,887 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:48:07,820 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:48:09,568 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:49:22,798 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:49:23,662 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:51:07,481 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:51:11,175 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:54:40,048 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:54:41,668 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:55:00,290 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:55:01,194 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:57:01,936 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:57:02,814 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 12:59:24,156 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 12:59:25,200 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 13:02:58,581 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 13:02:59,499 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 13:03:13,625 - __main__ - INFO - Extraindo dados das partidas
+2025-04-28 13:03:14,650 - __main__ - ERROR - Erro ao buscar partidas: 'NoneType' object has no attribute 'strip'
+2025-04-28 13:04:31,908 - __main__ - INFO - Extraindo dados das partidas

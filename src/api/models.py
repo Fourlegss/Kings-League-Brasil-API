@@ -12,6 +12,8 @@ class Match(BaseModel):
     match_id: str = Field(..., description="ID único da partida")
     home_team: str = Field(..., description="Nome do time da casa")
     away_team: str = Field(..., description="Nome do time visitante")
+    home_score: Optional[int] = Field(None, description="Placar do time da casa")
+    away_score: Optional[int] = Field(None, description="Placar do time visitante")
     link: str = Field(..., description="Link para a página da partida")
     created_at: datetime = Field(default_factory=datetime.now)
     updated_at: datetime = Field(default_factory=datetime.now)

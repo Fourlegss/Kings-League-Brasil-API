@@ -65,6 +65,8 @@ Retorna a lista de partidas da Kings League Brasil.
             "match_id": "time1-vs-time2",
             "home_team": "TIME_DA_CASA",
             "away_team": "TIME_VISITANTE",
+            "home_score": 2,
+            "away_score": 1,
             "link": "https://kingsleague.pro/pt/brazil/jogos/time1-vs-time2",
             "created_at": "2024-02-20T10:00:00",
             "updated_at": "2024-02-20T10:00:00"
@@ -78,6 +80,8 @@ Retorna a lista de partidas da Kings League Brasil.
 - `match_id`: Identificador único da partida
 - `home_team`: Nome do time da casa
 - `away_team`: Nome do time visitante
+- `home_score`: Placar do time da casa (pode ser null se a partida ainda não foi realizada)
+- `away_score`: Placar do time visitante (pode ser null se a partida ainda não foi realizada)
 - `link`: URL da página da partida
 - `created_at`: Data de criação do registro
 - `updated_at`: Data da última atualização
